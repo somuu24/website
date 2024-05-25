@@ -1,11 +1,7 @@
 header{
     background-color: rgba(69, 69, 133, 0.433);
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    justify-content: space-around;
-    justify-content: space-evenly;
-    justify-content: space-between;
 }
 .logo{
     flex-grow: 1;
