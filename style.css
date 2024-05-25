@@ -1,0 +1,65 @@
+header{
+    background-color: rgba(69, 69, 133, 0.433);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    justify-content: space-between;
+}
+.logo{
+    flex-grow: 1;
+}
+.nav{
+    flex-grow: 12;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    justify-content: space-around;
+    padding-top: 15px ;
+}
+.nav div{
+    display: inline-block;
+    font-size: 220%;
+    padding: 10px;
+    color: aliceblue;
+}
+.login div{
+    display: inline-block;
+    background-color: green;
+    color: aliceblue;
+    border: green;
+    border-radius: 40px;
+    width: 48%;
+    height: 50%;
+    text-align: center;
+    padding-top: 10px;
+}
+.login{
+    flex-grow: 4;
+    padding-top: 30px;
+}
+body{
+    background-image: url(background.jpg);
+    background-attachment: fixed;
+}
+.container{
+    padding-left: 20%;
+    padding-top: 10%;
+    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    justify-content: space-around;
+}
+.info{
+    text-align: center;
+    margin: 0.5%;
+    color: azure;
+    width: 230px;
+    border-radius: 30px;
+    float: right;
+    background-color: rgba(240, 248, 255, 0.285);
+}
