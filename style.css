@@ -18,7 +18,7 @@ header{
 }
 .nav div{
     display: inline-block;
-    font-size: 220%;
+    font-size: 35px;
     padding: 10px;
     color: aliceblue;
 }
