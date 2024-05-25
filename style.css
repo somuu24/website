@@ -5,6 +5,7 @@ header{
 }
 .logo{
     flex-grow: 1;
+    padding-top: 15px;
 }
 .nav{
     flex-grow: 12;
