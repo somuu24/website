@@ -5,44 +5,40 @@ header{
 }
 .logo{
     flex-grow: 1;
-    padding-top: 15px;
 }
 .nav{
-    flex-grow: 12;
+    flex-grow: 10;
     text-align: center;
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
     justify-content: space-around;
-    padding-top: 15px ;
+    padding-top: 4% ;
 }
 .nav div{
     display: inline-block;
-    font-size: 35px;
+    font-size: 150%;
     padding: 10px;
     color: aliceblue;
 }
 .login div{
-    display: inline-block;
     background-color: green;
     color: aliceblue;
     border: green;
-    border-radius: 40px;
-    width: 48%;
-    height: 50%;
+    border-radius: 30%;
     text-align: center;
-    padding-top: 10px;
+    font-size: 30px;
 }
 .login{
-    flex-grow: 4;
-    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3%;
 }
 body{
     background-image: url(background.jpg);
     background-attachment: fixed;
 }
 .container{
-    padding-left: 20%;
     padding-top: 10%;
     display: inline-block;
     display: flex;
