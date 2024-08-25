@@ -1,147 +1,183 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    body{
-        background-color: black;
-        color: aliceblue;
-    }
-    .container{
-        background-color: rgb(49, 48, 48);
-        color: aliceblue;
-        font-size: 2em;
-        display: flex;
-        height: 2em;
-    }
-    .nav{
-        padding-top: 1%;
-        padding-left: 1%;
-    }
-    .nav a{
-        text-decoration: none;
-        color: aliceblue;
-    }
-    .logo a{
-        text-decoration: none;
-        padding-left: 0.5rem;
-        flex-grow: 1;
-        color: aliceblue;
-    }
-    .logo{
-        padding-top: 2%;
-    }
-    .search input{
-        border-radius: 30em;
-        width: 90%;
-    }
-    .search{
-        flex-grow: 4;
-        padding: 1%;
-    }
-    @media (max-width: 415px){
-        img{
-            width: 100%;
-            border-radius: 5px;
-        }
-    }
-    @media(min-width: 416px){
-        img{
-            width: 100%;
-        }
-        .s3{
-            width: 480px;
-            height: 270px;
-            border: 2px solid red;
-            margin: 3px;
-            float: right;
-        }
-    }
-</style>
-<header>
-    <div class="container">
-        <div class="nav">
-            <a href="https://www.youtube.com">&#9776</p></a></s>
-        </div>
-        <div class="logo">
-            <a href="index.html">SOMU</a>
-        </div>
-        <div class="search">
-            <input type="search" class="search">
-        </div>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+				}
+				.dark {
+					--background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+				}
+			}
+		</style>
+  </head>
+  <body>
+    
+
+<div class="bg-background text-foreground min-h-screen">
+  <nav class="bg-primary p-4 flex justify-between items-center">
+    <img src="https://placehold.co/150" alt="BookMyShow Logo" class="h-8" />
+    <div class="flex space-x-4">
+      <a href="#" class="text-primary-foreground">Hospitals</a>
+      <a href="#" class="text-primary-foreground">About</a>
+      <a href="#" class="text-primary-foreground">Contact</a>
+      <a href="#" class="text-primary-foreground"></a>
     </div>
-</header>
-<body>
-    <div class="s1">
-        <div class="s2">
-            <div class="s3">
-                <span><img src="background.jpg"></span>
-                <li style="padding: 8px;">image 1</li>
-            </div>
-        </div>
-        <div class="s2">
-            <div class="s3">
-                <span><img src="background.jpg"></span>
-                <li style="padding: 8px;">image 1</li>
-            </div>
-        </div>
-        <div class="s2">
-            <div class="s3">
-                <span><img src="background.jpg"></span>
-                <li style="padding: 8px;">image 1</li>
-            </div>
-        </div>
-        <div class="s2">
-            <div class="s3">
-                <span><img src="background.jpg"></span>
-                <li style="padding: 8px;">image 1</li>
-            </div>
-        </div>
-        <div class="s2">
-            <div class="s3">
-                <span><img src="background.jpg"></span>
-                <li style="padding: 8px;">image 1</li>
-            </div>
-        </div>
-        <div class="s2">
-            <div class="s3">
-                <span><img src="background.jpg"></span>
-                <li style="padding: 8px;">image 1</li>
-            </div>
-        </div>
-        <div class="s2">
-            <div class="s3">
-                <span><img src="logo.png"></span>
-                <li style="padding: 8px;">image 1</li>
-            </div>
-        </div>
-        <div class="s2">
-            <div class="s3">
-                <span><img src="background.jpg"></span>
-                <li style="padding: 8px;">image 1</li>
-            </div>
-        </div>
-        <div class="s2">
-            <div class="s3">
-                <span><img src="background.jpg"></span>
-                <li style="padding: 8px;">image 1</li>
-            </div>
-        </div>
-        <div class="s2">
-            <div class="s3">
-                <span><img src="background.jpg"></span>
-                <li style="padding: 8px;">image 1</li>
-            </div>
-        </div>
-        <div class="s2">
-            <div class="s3">
-                <span><img src="background.jpg"></span>
-                <li style="padding: 8px;">image 1</li>
-            </div>
-        </div>
+    <a href="uiux mansi.html"><button class="bg-primary-foreground text-primary px-4 py-2 rounded-lg">Sign In</button></a>
+  </nav>
+  <section class="bg-primary-foreground text-primary p-8 text-center">
+    <h1 class="text-4xl font-bold mb-4">Reserve your slot</h1>
+    <p class="text-lg mb-4">Find the beds available in the hospitals and the appointment scheduling.</p>
+    <button class="bg-primary text-primary-foreground px-6 py-3 rounded-lg">Get apointment</button>
+  </section>
+  <section class="p-8">
+    <h2 class="text-2xl font-bold mb-4">Featured Hospitals</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="bg-card p-4 rounded-lg">
+        <img src="https://placehold.co/300" alt="Movie Poster" class="w-full h-48 object-cover rounded-lg mb-4" />
+        <h3 class="text-lg font-bold mb-2">Lata Mangeshkar</h3>
+        <button class="bg-primary text-primary-foreground px-4 py-2 rounded-lg mt-2">Book Now</button>
+      </div>
     </div>
-</body>
+  </section>
+  <section class="p-8">
+    <h2 class="text-2xl font-bold mb-4">bed Selection</h2>
+    <div class="grid grid-cols-3 gap-4">
+      <div class="bg-card p-4 rounded-lg">
+        <h3 class="text-lg font-bold mb-2">Screen</h3>
+        <div class="grid grid-cols-8 gap-1">
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">1</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">2</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">3</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">4</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">5</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">6</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">7</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">8</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">9</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">10</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">11</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">12</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">13</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">14</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">15</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">16</div>
+        </div>
+      </div>
+      <div class="bg-card p-4 rounded-lg col-span-2">
+        <h3 class="text-lg font-bold mb-2">Seat Selection</h3>
+        <div class="grid grid-cols-8 gap-1">
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">A</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">B</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">C</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">D</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">E</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">F</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">G</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">H</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">I</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">J</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">K</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">L</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">M</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">N</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">O</div>
+          <div class="bg-primary-foreground text-primary rounded-lg p-2">P</div>
+        </div>
+        <button class="bg-primary text-primary-foreground px-4 py-2 rounded-lg mt-4">Confirm Seats</button>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-primary p-4 text-primary-foreground text-center">
+    <p>&copy; 2023 BookMyShow. All rights reserved.</p>
+  </footer>
+</div>
+
+
+  </body>
 </html>
